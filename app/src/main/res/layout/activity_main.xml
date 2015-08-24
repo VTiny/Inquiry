@@ -21,4 +21,12 @@
         android:layout_marginTop="15dp"
         android:text="查询天气" />
 
+    <Button
+        android:id="@+id/btn_movie_main"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="查询电影" />
+
 </LinearLayout>

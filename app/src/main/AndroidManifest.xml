@@ -26,6 +26,8 @@
 
         <activity android:name=".activity.WeatherActivity"/>
 
+        <activity android:name=".activity.MovieActivity"/>
+
     </application>
 
 

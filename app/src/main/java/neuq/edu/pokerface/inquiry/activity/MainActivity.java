@@ -17,6 +17,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button telButton = (Button) findViewById(R.id.btn_tel_main);
+        Button weatherButton = (Button) findViewById(R.id.btn_weather_main);
+        Button movieButton = (Button) findViewById(R.id.btn_movie_main);
+
         telButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,11 +28,20 @@ public class MainActivity extends Activity {
             }
         });
 
-        Button weatherButton = (Button) findViewById(R.id.btn_weather_main);
+
         weatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        movieButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MovieActivity.class);
                 startActivity(intent);
             }
         });

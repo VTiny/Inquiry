@@ -12,7 +12,6 @@ import retrofit.http.Query;
 public class TelUtil {
 
     static final String ENDPOINT = "http://apis.juhe.cn/mobile";
-    static final String KEY = "2b45775eb29e4998116242f56ad49f8c";
 
     public interface TelService {
         @GET("/get")

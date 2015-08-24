@@ -15,7 +15,8 @@
     <string name="tel_company">运营商:</string>
     <string name="tel_card">卡类型:</string>
 
-    <string name="weather_hint">请输入城市名
-    </string>
+    <string name="weather_hint">请输入城市名</string>
+
+    <string name="movie_hint">请输入电影名</string>
 
 </resources>
