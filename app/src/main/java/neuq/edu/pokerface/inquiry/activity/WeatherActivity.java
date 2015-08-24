@@ -1,6 +1,7 @@
 package neuq.edu.pokerface.inquiry.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,16 @@ public class WeatherActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+        Button returnButton = (Button) findViewById(R.id.btn_weather_back);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeatherActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button weatherButton = (Button) findViewById(R.id.btn_weather_inquire);
         weatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +72,7 @@ public class WeatherActivity extends Activity {
                             reaWinWindSpeed = String.valueOf(weather.getResult().getData().getRealtime().getWind().getWindspeed());
                             reaWeather = "    温度： " + reaWeaTemperature + "\n    湿度： " + reaWeaHumidify + "\n    天气： " + reaWeaInfo + "\n";
                             reaWind    = "    风向： " + reaWinDirect + "\n    风力： " + reaWinPower + "\n    风速： " + reaWinWindSpeed + "\n";
-                            realTime = "现在是" + reaDate + ", 阴历" + reaMoon + ", 在" + reaTime + "发布的天气预报为：\n" + reaWeather + reaWind + "\n\n";
+                            realTime = "    现在是" + reaDate + ", 阴历" + reaMoon + ", 在" + reaTime + "发布的天气预报为：\n" + reaWeather + reaWind + "\n\n";
 
                             String pm25;
                             String key, showDec, dateTime, cityName, pm25Data;
@@ -74,17 +85,20 @@ public class WeatherActivity extends Activity {
                             pmdDes     = weather.getResult().getData().getPm25().getPm25Data().getDes();
                             dateTime = weather.getResult().getData().getPm25().getDateTime();
                             cityName = weather.getResult().getData().getPm25().getCityName();
-                            pm25 = "在"+dateTime+"发布的"+cityName+"空气质量报告为："+"\n   空气污染指数: "+pmdCurPm+"\n   pm2.5指数: "+pmdPm25
+                            pm25 = "    在"+dateTime+"发布的"+cityName+"空气质量报告为："+"\n   空气污染指数: "+pmdCurPm+"\n   pm2.5指数: "+pmdPm25
                                     +"\n   pm10指数: "+pmdPm10+"\n   空气质量为: "+pmdQuality+", "+pmdDes+"\n\n";
 
 
+                            //妈蛋这儿处理不明白了，哪天心情好继续
                             String recentWeather = "";
                             List<RecentWeather> recentWeathersList = weather.getResult().getData().getRecentWeather();
                             for(int i = 0; i < recentWeathersList.size(); i++){
+
                                 String recentWeatherDate = recentWeathersList.get(i).getDate();
                                 Info recentWeatherInfo = recentWeathersList.get(i).getInfo();
                                 String recentWeatherWeek = recentWeathersList.get(i).getWeek();
-                                String recetnWeatherNongli = recentWeathersList.get(i).getNongli();
+                                String recentWeatherNongli = recentWeathersList.get(i).getNongli();
+                                recentWeather = reaWeather+"date:"+recentWeatherDate+"week:"+recentWeatherWeek+"nongli"+recentWeatherNongli;
                                 Object[][] recentWeatherData = new Object[3][];
                                 if(i!=0) {
                                     List<String> infoDawn = recentWeatherInfo.getDawn();

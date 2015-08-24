@@ -7,7 +7,7 @@
     <string name="inquire_button">查询</string>
     <string name="back_button">back</string>
 
-    <string name="tel_hint">请输入手机号码:</string>
+    <string name="tel_hint">请输入手机号码</string>
     <string name="tel_province">省份:</string>
     <string name="tel_city">城市:</string>
     <string name="tel_areacode">区号:</string>
@@ -15,6 +15,7 @@
     <string name="tel_company">运营商:</string>
     <string name="tel_card">卡类型:</string>
 
-    <string name="weather_hint">请输入城市名称：</string>
+    <string name="weather_hint">请输入城市名
+    </string>
 
 </resources>
