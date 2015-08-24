@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="查询手机号" />
+        android:background="#268785"
+        android:text="查询手机号"
+        android:textColor="#ffebe1ff" />
 
     <Button
         android:id="@+id/btn_weather_main"
@@ -19,7 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="查询天气" />
+        android:background="#268785"
+        android:text="查询天气"
+        android:textColor="#ffebe1ff" />
 
     <Button
         android:id="@+id/btn_movie_main"
@@ -27,6 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="查询电影" />
+        android:background="#268785"
+        android:text="查询电影"
+        android:textColor="#ffebe1ff" />
 
 </LinearLayout>
