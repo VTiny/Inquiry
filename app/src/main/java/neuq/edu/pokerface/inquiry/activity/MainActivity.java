@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
         Button telButton = (Button) findViewById(R.id.btn_tel_main);
         Button weatherButton = (Button) findViewById(R.id.btn_weather_main);
         Button movieButton = (Button) findViewById(R.id.btn_movie_main);
+        Button ipButton = (Button) findViewById(R.id.btn_ip_main);
 
         telButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,15 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        ipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IpActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

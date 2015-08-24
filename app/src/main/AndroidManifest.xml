@@ -28,6 +28,8 @@
 
         <activity android:name=".activity.MovieActivity"/>
 
+        <activity android:name=".activity.IpActivity"/>
+
     </application>
 
 

@@ -19,4 +19,6 @@
 
     <string name="movie_hint">请输入电影名</string>
 
+    <string name="ip_hint">请输入网址</string>
+
 </resources>

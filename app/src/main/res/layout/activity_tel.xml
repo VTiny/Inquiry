@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:id="@+id/layout_tel_inquire"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -41,115 +41,27 @@
             android:textColor="#ffebe1ff"
             android:textSize="15sp" />
 
-
     </LinearLayout>
 
-
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layout_tel_inquire"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="10dp"
-        android:stretchColumns="1">
+        android:layout_below="@id/layout_tel_inquire"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="25dp">
 
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
+        <TextView
+            android:id="@+id/txt_tel_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="just for text"
+            android:textSize="@dimen/text_size_content"
+            android:visibility="invisible" />
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_province"
-                android:textSize="@dimen/text_size_tital" />
+    </ScrollView>
 
-            <TextView
-                android:id="@+id/txt_tel_result_province"
-                android:layout_height="wrap_content"
-                android:text="province test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_city"
-                android:textSize="@dimen/text_size_tital" />
-
-            <TextView
-                android:id="@+id/txt_tel_result_city"
-                android:layout_height="wrap_content"
-                android:text="city test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_areacode"
-                android:textSize="@dimen/text_size_tital" />
-
-            <TextView
-                android:id="@+id/txt_tel_result_areacode"
-                android:layout_height="wrap_content"
-                android:text="areacode test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_zip"
-                android:textSize="@dimen/text_size_tital" />
-
-            <TextView
-                android:id="@+id/txt_tel_result_zip"
-                android:layout_height="wrap_content"
-                android:text="zip test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_company"
-                android:textSize="@dimen/text_size_tital" />
-
-            <TextView
-                android:id="@+id/txt_tel_result_company"
-                android:layout_height="wrap_content"
-                android:text="company test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="@dimen/widget_margin">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="@string/tel_card"
-                android:textSize="@dimen/text_size_tital" />
-
-            <TextView
-                android:id="@+id/txt_tel_result_card"
-                android:layout_height="wrap_content"
-                android:text="card test"
-                android:textSize="@dimen/text_size_content"
-                android:visibility="invisible" />
-        </TableRow>
-    </TableLayout>
 
 
 </RelativeLayout>

@@ -53,26 +53,17 @@ public class TelActivity extends Activity {
                             Log.e("---reason:----------", tel.getReason());
                             Log.e("---error code:------", String.valueOf(tel.getError_code()));
 
-                            TextView provinceTV = (TextView) findViewById(R.id.txt_tel_result_province);
-                            TextView cityTV = (TextView) findViewById(R.id.txt_tel_result_city);
-                            TextView areacodeTV = (TextView) findViewById(R.id.txt_tel_result_areacode);
-                            TextView zipTV = (TextView) findViewById(R.id.txt_tel_result_zip);
-                            TextView companyTV = (TextView) findViewById(R.id.txt_tel_result_company);
-                            TextView cardTV = (TextView) findViewById(R.id.txt_tel_result_card);
+                            String telResult = "";
+                            telResult = telResult + "  省份：　" + tel.getResult().getProvince() + "\n";
+                            telResult = telResult + "  城市：　" + tel.getResult().getCity() + "\n";
+                            telResult = telResult + "  区号：　" + tel.getResult().getAreacode() + "\n";
+                            telResult = telResult + "  邮编：　" + tel.getResult().getZip() + "\n";
+                            telResult = telResult + "  运营商：" + tel.getResult().getCompany() + "\n";
+                            telResult = telResult + "  卡类型：" + tel.getResult().getCard() + "\n";
 
-                            provinceTV.setText(tel.getResult().getProvince());
-                            cityTV.setText(tel.getResult().getCity());
-                            areacodeTV.setText(tel.getResult().getAreacode());
-                            zipTV.setText(tel.getResult().getZip());
-                            companyTV.setText(tel.getResult().getCompany());
-                            cardTV.setText(tel.getResult().getCard());
-
-                            provinceTV.setVisibility(View.VISIBLE);
-                            cityTV.setVisibility(View.VISIBLE);
-                            areacodeTV.setVisibility(View.VISIBLE);
-                            zipTV.setVisibility(View.VISIBLE);
-                            companyTV.setVisibility(View.VISIBLE);
-                            cardTV.setVisibility(View.VISIBLE);
+                            TextView txtResult = (TextView) findViewById(R.id.txt_tel_result);
+                            txtResult.setText(telResult);
+                            txtResult.setVisibility(View.VISIBLE);
 
                         }
 
