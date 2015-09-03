@@ -21,4 +21,6 @@
 
     <string name="ip_hint">请输入网址</string>
 
+    <string name="apple_hint">请输入苹果序列号</string>
+
 </resources>

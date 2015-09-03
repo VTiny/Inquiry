@@ -30,6 +30,8 @@
 
         <activity android:name=".activity.IpActivity"/>
 
+        <activity android:name=".activity.AppleActivity"/>
+
     </application>
 
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_apple_inquire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_apple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:hint="@string/apple_hint" />
+
+        <Button
+            android:id="@+id/btn_apple_inquire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#268785"
+            android:text="@string/inquire_button"
+            android:textColor="#ffebe1ff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_apple_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:background="#268785"
+            android:text="@string/back_button"
+            android:textColor="#ffebe1ff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_apple_inquire"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/txt_apple_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="just for text"
+            android:textSize="@dimen/text_size_content"
+            android:visibility="invisible" />
+
+    </ScrollView>
+
+</RelativeLayout>
